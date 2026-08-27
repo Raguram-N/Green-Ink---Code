@@ -1,0 +1,1452 @@
+{
+  "units": [
+    {
+      "id": "u1",
+      "number": 1,
+      "roman": "I",
+      "title": "General Science",
+      "chapters": [
+        {
+          "id": "u1-c1",
+          "number": 1,
+          "title": "Scientific Knowledge and Scientific Temper",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c2",
+          "number": 2,
+          "title": "Power of Reasoning",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c3",
+          "number": 3,
+          "title": "Rote Learning and Conceptual Learning",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c4",
+          "number": 4,
+          "title": "Science as a Tool to Understand the Past, Present, and Future",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c5",
+          "number": 5,
+          "title": "Nature of the Universe",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c6",
+          "number": 6,
+          "title": "General Scientific Laws",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c7",
+          "number": 7,
+          "title": "Mechanics",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c8",
+          "number": 8,
+          "title": "Properties of Matter",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c9",
+          "number": 9,
+          "title": "Force",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c10",
+          "number": 10,
+          "title": "Motion",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c11",
+          "number": 11,
+          "title": "Energy",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c12",
+          "number": 12,
+          "title": "Everyday Applications of Mechanics",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c13",
+          "number": 13,
+          "title": "Electricity",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c14",
+          "number": 14,
+          "title": "Magnetism",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c15",
+          "number": 15,
+          "title": "Light",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c16",
+          "number": 16,
+          "title": "Sound",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c17",
+          "number": 17,
+          "title": "Heat",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c18",
+          "number": 18,
+          "title": "Nuclear Physics",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c19",
+          "number": 19,
+          "title": "Laser",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c20",
+          "number": 20,
+          "title": "Electronics",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c21",
+          "number": 21,
+          "title": "Communication Technology",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c22",
+          "number": 22,
+          "title": "Elements and Compounds",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c23",
+          "number": 23,
+          "title": "Acids, Bases, and Salts",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c24",
+          "number": 24,
+          "title": "Petroleum Products",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c25",
+          "number": 25,
+          "title": "Fertilizers",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c26",
+          "number": 26,
+          "title": "Pesticides",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c27",
+          "number": 27,
+          "title": "Main Concepts of Life Science",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c28",
+          "number": 28,
+          "title": "Classification of Living Organisms",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c29",
+          "number": 29,
+          "title": "Evolution",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c30",
+          "number": 30,
+          "title": "Genetics",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c31",
+          "number": 31,
+          "title": "Physiology",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c32",
+          "number": 32,
+          "title": "Nutrition",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c33",
+          "number": 33,
+          "title": "Health and Hygiene",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c34",
+          "number": 34,
+          "title": "Human Diseases",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u1-c35",
+          "number": 35,
+          "title": "Environment and Ecology",
+          "access": "FREE",
+          "hasNotes": true
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "number": 2,
+      "roman": "II",
+      "title": "Geography of India",
+      "chapters": [
+        {
+          "id": "u2-c1",
+          "number": 1,
+          "title": "Location of India",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c2",
+          "number": 2,
+          "title": "Physiographic Divisions of India",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c3",
+          "number": 3,
+          "title": "Himalayan Mountains",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c4",
+          "number": 4,
+          "title": "Northern Plains",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c5",
+          "number": 5,
+          "title": "Peninsular Plateau",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c6",
+          "number": 6,
+          "title": "Indian Desert, Coastal Plains and Islands",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c7",
+          "number": 7,
+          "title": "Climate of India",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c8",
+          "number": 8,
+          "title": "Indian Monsoon",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c9",
+          "number": 9,
+          "title": "Rainfall and Weather Systems",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c10",
+          "number": 10,
+          "title": "Water Resources of India",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c11",
+          "number": 11,
+          "title": "Himalayan Rivers",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c12",
+          "number": 12,
+          "title": "Peninsular Rivers",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c13",
+          "number": 13,
+          "title": "Soils of India",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c14",
+          "number": 14,
+          "title": "Land Resources and Land Use",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c15",
+          "number": 15,
+          "title": "Mineral Resources",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c16",
+          "number": 16,
+          "title": "Energy and Other Natural Resources",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c17",
+          "number": 17,
+          "title": "Forest Resources",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c18",
+          "number": 18,
+          "title": "Wildlife and Biodiversity",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c19",
+          "number": 19,
+          "title": "Agriculture in India",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c20",
+          "number": 20,
+          "title": "Cropping Patterns and Major Crops",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c21",
+          "number": 21,
+          "title": "Irrigation and Agricultural Development",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c22",
+          "number": 22,
+          "title": "Transport and Communication",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c23",
+          "number": 23,
+          "title": "Population of India",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c24",
+          "number": 24,
+          "title": "Social Geography of India",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c25",
+          "number": 25,
+          "title": "Natural Disasters and Disaster Management",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u2-c26",
+          "number": 26,
+          "title": "Environmental Pollution, Climate Change and Green Energy",
+          "access": "PREMIUM",
+          "hasNotes": true
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "number": 3,
+      "roman": "III",
+      "title": "History, Culture of India, and Indian National Movement",
+      "chapters": [
+        {
+          "id": "u3-c1",
+          "number": 1,
+          "title": "Indus Valley Civilization",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c2",
+          "number": 2,
+          "title": "Gupta Empire",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c3",
+          "number": 3,
+          "title": "Delhi Sultanate",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c4",
+          "number": 4,
+          "title": "Mughal Empire",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c5",
+          "number": 5,
+          "title": "Maratha Empire",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c6",
+          "number": 6,
+          "title": "Vijayanagara Empire",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c7",
+          "number": 7,
+          "title": "Bahmani Kingdom",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c8",
+          "number": 8,
+          "title": "South Indian History",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c9",
+          "number": 9,
+          "title": "Change and Continuity in Indian Socio-Cultural History",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c10",
+          "number": 10,
+          "title": "National Renaissance",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c11",
+          "number": 11,
+          "title": "Early Uprisings Against British Rule",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c12",
+          "number": 12,
+          "title": "Indian National Congress",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c13",
+          "number": 13,
+          "title": "Emergence of National Leaders",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c14",
+          "number": 14,
+          "title": "B.R. Ambedkar",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c15",
+          "number": 15,
+          "title": "Subhas Chandra Bose",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c16",
+          "number": 16,
+          "title": "Mahatma Gandhi",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c17",
+          "number": 17,
+          "title": "Jawaharlal Nehru",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c18",
+          "number": 18,
+          "title": "Maulana Abul Kalam Azad",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c19",
+          "number": 19,
+          "title": "Rabindranath Tagore",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c20",
+          "number": 20,
+          "title": "Bhagat Singh",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c21",
+          "number": 21,
+          "title": "C. Rajagopalachari",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c22",
+          "number": 22,
+          "title": "K. Kamarajar",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c23",
+          "number": 23,
+          "title": "V.O. Chidambaranar",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c24",
+          "number": 24,
+          "title": "Thanthai Periyar",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c25",
+          "number": 25,
+          "title": "Subramania Bharathiar",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c26",
+          "number": 26,
+          "title": "Other Important National Leaders",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c27",
+          "number": 27,
+          "title": "Different Modes of Agitation",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c28",
+          "number": 28,
+          "title": "Growth of Satyagraha",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c29",
+          "number": 29,
+          "title": "Militant Movements",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c30",
+          "number": 30,
+          "title": "Communalism and Partition",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c31",
+          "number": 31,
+          "title": "Characteristics of Indian Culture",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c32",
+          "number": 32,
+          "title": "National Symbols",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u3-c33",
+          "number": 33,
+          "title": "Important Personalities and miscellaneous",
+          "access": "PREMIUM",
+          "hasNotes": true
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "number": 4,
+      "roman": "IV",
+      "title": "Indian Polity",
+      "chapters": [
+        {
+          "id": "u4-c1",
+          "number": 1,
+          "title": "Constitution of India",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c2",
+          "number": 2,
+          "title": "Salient Features of the Constitution",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c3",
+          "number": 3,
+          "title": "Preamble to the Constitution",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c4",
+          "number": 4,
+          "title": "The Union",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c5",
+          "number": 5,
+          "title": "States",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c6",
+          "number": 6,
+          "title": "Union Territories",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c7",
+          "number": 7,
+          "title": "Citizenship",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c8",
+          "number": 8,
+          "title": "Fundamental Rights",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c9",
+          "number": 9,
+          "title": "DPSP",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c10",
+          "number": 10,
+          "title": "Fundamental Duties",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c11",
+          "number": 11,
+          "title": "Union Executive",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c12",
+          "number": 12,
+          "title": "Union Legislature",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c13",
+          "number": 13,
+          "title": "State Executive",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c14",
+          "number": 14,
+          "title": "State Legislature",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c15",
+          "number": 15,
+          "title": "Local Governments",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c16",
+          "number": 16,
+          "title": "Panchayati Raj",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c17",
+          "number": 17,
+          "title": "Federalism",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c18",
+          "number": 18,
+          "title": "Centre–State Relations",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c19",
+          "number": 19,
+          "title": "Elections",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c20",
+          "number": 20,
+          "title": "Judiciary in India",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c21",
+          "number": 21,
+          "title": "Rule of Law",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c22",
+          "number": 22,
+          "title": "Corruption in Public Life",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c23",
+          "number": 23,
+          "title": "Anti-Corruption Measures",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c24",
+          "number": 24,
+          "title": "Lokpal",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c25",
+          "number": 25,
+          "title": "Lokayukta",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c26",
+          "number": 26,
+          "title": "Right to Information",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c27",
+          "number": 27,
+          "title": "Empowerment of Women",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c28",
+          "number": 28,
+          "title": "Consumer Protection Forums",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c29",
+          "number": 29,
+          "title": "Human Rights Charter",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c30",
+          "number": 30,
+          "title": "Political System in India",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u4-c31",
+          "number": 31,
+          "title": "Political Parties in India",
+          "access": "PREMIUM",
+          "hasNotes": true
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "number": 5,
+      "roman": "V",
+      "title": "Indian Economy and Development Administration in Tamil Nadu",
+      "chapters": [
+        {
+          "id": "u5-c1",
+          "number": 1,
+          "title": "Nature of the Indian Economy",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c2",
+          "number": 2,
+          "title": "Five-Year Plan Models",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c3",
+          "number": 3,
+          "title": "Assessment of Five-Year Plans",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c4",
+          "number": 4,
+          "title": "Planning Commission",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c5",
+          "number": 5,
+          "title": "NITI Aayog",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c6",
+          "number": 6,
+          "title": "Sources of Government Revenue",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c7",
+          "number": 7,
+          "title": "Reserve Bank of India",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c8",
+          "number": 8,
+          "title": "Fiscal Policy",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c9",
+          "number": 9,
+          "title": "Monetary Policy",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c10",
+          "number": 10,
+          "title": "Finance Commission",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c11",
+          "number": 11,
+          "title": "Resource Sharing Between Union and State Governments",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c12",
+          "number": 12,
+          "title": "Goods and Services Tax",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c13",
+          "number": 13,
+          "title": "Structure of the Indian Economy",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c14",
+          "number": 14,
+          "title": "Employment Generation",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c15",
+          "number": 15,
+          "title": "Land Reforms",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c16",
+          "number": 16,
+          "title": "Agriculture",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c17",
+          "number": 17,
+          "title": "Application of Science and Technology in Agriculture",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c18",
+          "number": 18,
+          "title": "Industrial Growth",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c19",
+          "number": 19,
+          "title": "Rural Welfare Programmes",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c20",
+          "number": 20,
+          "title": "Social Problems",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c21",
+          "number": 21,
+          "title": "Population",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c22",
+          "number": 22,
+          "title": "Education",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c23",
+          "number": 23,
+          "title": "Health",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c24",
+          "number": 24,
+          "title": "Employment",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c25",
+          "number": 25,
+          "title": "Poverty",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c26",
+          "number": 26,
+          "title": "Human Development Indicators in Tamil Nadu",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c27",
+          "number": 27,
+          "title": "Comparison of Tamil Nadu with Other States",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c28",
+          "number": 28,
+          "title": "Social Reform Movements and Tamil Nadu’s Development",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c29",
+          "number": 29,
+          "title": "Political Parties and Welfare Schemes",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c30",
+          "number": 30,
+          "title": "Welfare Schemes for Different Sections of Society",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c31",
+          "number": 31,
+          "title": "Reservation Policy",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c32",
+          "number": 32,
+          "title": "Access to Social Resources",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c33",
+          "number": 33,
+          "title": "Economic Trends in Tamil Nadu",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c34",
+          "number": 34,
+          "title": "Social Welfare Schemes and Socio-Economic Development",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c35",
+          "number": 35,
+          "title": "Social Justice",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c36",
+          "number": 36,
+          "title": "Social Harmony",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c37",
+          "number": 37,
+          "title": "Education System in Tamil Nadu",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c38",
+          "number": 38,
+          "title": "Health System in Tamil Nadu",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c39",
+          "number": 39,
+          "title": "Geography of Tamil Nadu and Economic Growth",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c40",
+          "number": 40,
+          "title": "Achievements of Tamil Nadu",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c41",
+          "number": 41,
+          "title": "e-Governance in Tamil Nadu",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c42",
+          "number": 42,
+          "title": "Public Awareness",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c43",
+          "number": 43,
+          "title": "General Administration",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c44",
+          "number": 44,
+          "title": "Welfare-Oriented Government Schemes",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c45",
+          "number": 45,
+          "title": "Utility of Government Schemes",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u5-c46",
+          "number": 46,
+          "title": "Problems in Public Delivery Systems",
+          "access": "PREMIUM",
+          "hasNotes": true
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "number": 6,
+      "roman": "VI",
+      "title": "History, Culture, Heritage, and Socio-Political Movements in Tamil Nadu",
+      "chapters": [
+        {
+          "id": "u6-c1",
+          "number": 1,
+          "title": "History of Tamil Society",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c2",
+          "number": 2,
+          "title": "Archaeological Discoveries in Tamil Nadu",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c3",
+          "number": 3,
+          "title": "Sangam Age",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c4",
+          "number": 4,
+          "title": "Sangam Literature",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c5",
+          "number": 5,
+          "title": "Post-Sangam Tamil Literature",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c6",
+          "number": 6,
+          "title": "Medieval Tamil Literature",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c7",
+          "number": 7,
+          "title": "Modern Tamil Literature",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c8",
+          "number": 8,
+          "title": "Contemporary Tamil Literature",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c9",
+          "number": 9,
+          "title": "திருக்குறள் (குறள்)",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c10",
+          "number": 10,
+          "title": "திருக்குறள் as Secular Literature",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c11",
+          "number": 11,
+          "title": "Relevance of Thirukkural to Everyday Life",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c12",
+          "number": 12,
+          "title": "Impact of Thirukkural on Humanity",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c13",
+          "number": 13,
+          "title": "Thirukkural and Universal Values",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c14",
+          "number": 14,
+          "title": "Thirukkural and Socio-Political Affairs",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c15",
+          "number": 15,
+          "title": "Thirukkural and Economic Affairs",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c16",
+          "number": 16,
+          "title": "Philosophical Content of Thirukkural",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c17",
+          "number": 17,
+          "title": "Tamil Nadu’s Role in the Freedom Struggle",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c18",
+          "number": 18,
+          "title": "Early Agitations Against British Rule",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c19",
+          "number": 19,
+          "title": "Role of Women in the Freedom Struggle",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c20",
+          "number": 20,
+          "title": "Nineteenth-Century Socio-Political Movements",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c21",
+          "number": 21,
+          "title": "Twentieth-Century Socio-Political Movements",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c22",
+          "number": 22,
+          "title": "Justice Party",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c23",
+          "number": 23,
+          "title": "Growth of Rationalism",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c24",
+          "number": 24,
+          "title": "Self-Respect Movement",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c25",
+          "number": 25,
+          "title": "Dravidian Movement",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c26",
+          "number": 26,
+          "title": "Principles of the Self-Respect Movement",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c27",
+          "number": 27,
+          "title": "Principles of the Dravidian Movement",
+          "access": "PREMIUM",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c28",
+          "number": 28,
+          "title": "Contributions of Thanthai Periyar",
+          "access": "FREE",
+          "hasNotes": true
+        },
+        {
+          "id": "u6-c29",
+          "number": 29,
+          "title": "Contributions of Perarignar Anna",
+          "access": "PREMIUM",
+          "hasNotes": true
+        }
+      ]
+    }
+  ]
+}

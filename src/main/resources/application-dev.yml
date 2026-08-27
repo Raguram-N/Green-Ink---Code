@@ -1,0 +1,10 @@
+greenink:
+  security:
+    jwt-secret: dev-only-green-ink-jwt-secret-change-before-production-0123456789abcdef
+    secure-cookies: false
+  auth:
+    mode: dev
+    expose-dev-otp: true
+    admin-identifiers: admin@greenink.local
+  billing:
+    mode: demo
