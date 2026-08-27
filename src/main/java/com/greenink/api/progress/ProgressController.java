@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/me/progress")
+@RequestMapping("${greenink.api.base-path}/me/progress")
 public class ProgressController {
     private final ProgressService progressService;
 

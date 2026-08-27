@@ -24,8 +24,10 @@ public class SecurityConfig {
             HttpSecurity http,
             JwtAuthenticationFilter jwtFilter,
             JsonAuthenticationEntryPoint authenticationEntryPoint,
-            JsonAccessDeniedHandler accessDeniedHandler
+            JsonAccessDeniedHandler accessDeniedHandler,
+            GreenInkProperties properties
     ) throws Exception {
+        String api = properties.api().basePath();
         return http
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> {})
@@ -35,14 +37,14 @@ public class SecurityConfig {
                         .accessDeniedHandler(accessDeniedHandler))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/actuator/health", "/actuator/info").permitAll()
-                        .requestMatchers("/api/v1/auth/logout-all").authenticated()
-                        .requestMatchers("/api/v1/auth/**").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/api/v1/units/**", "/api/v1/chapters/**", "/api/v1/search", "/api/v1/plans").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/v1/chapters/*/pyq/attempts").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/v1/pyq/attempts/*/answers", "/api/v1/pyq/attempts/*/complete").permitAll()
-                        .requestMatchers("/api/v1/webhooks/**").permitAll()
-                        .requestMatchers("/api/v1/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/api/v1/me/**", "/api/v1/billing/**").authenticated()
+                        .requestMatchers(api + "/auth/logout-all").authenticated()
+                        .requestMatchers(api + "/auth/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, api + "/units/**", api + "/chapters/**", api + "/search", api + "/plans").permitAll()
+                        .requestMatchers(HttpMethod.POST, api + "/chapters/*/pyq/attempts").permitAll()
+                        .requestMatchers(HttpMethod.POST, api + "/pyq/attempts/*/answers", api + "/pyq/attempts/*/complete").permitAll()
+                        .requestMatchers(api + "/webhooks/**").permitAll()
+                        .requestMatchers(api + "/admin/**").hasRole("ADMIN")
+                        .requestMatchers(api + "/me/**", api + "/billing/**").authenticated()
                         .anyRequest().authenticated())
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();

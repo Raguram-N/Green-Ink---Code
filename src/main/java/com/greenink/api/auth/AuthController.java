@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/auth")
+@RequestMapping("${greenink.api.base-path}/auth")
 public class AuthController {
     public static final String REFRESH_COOKIE = "gi_refresh";
 
@@ -70,7 +70,7 @@ public class AuthController {
                 .httpOnly(true)
                 .secure(properties.security().secureCookies())
                 .sameSite("Strict")
-                .path("/api/v1/auth")
+                .path(properties.api().basePath() + "/auth")
                 .maxAge(result.refreshMaxAgeSeconds())
                 .build();
         return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, cookie.toString()).body(result.response());
@@ -81,7 +81,7 @@ public class AuthController {
                 .httpOnly(true)
                 .secure(properties.security().secureCookies())
                 .sameSite("Strict")
-                .path("/api/v1/auth")
+                .path(properties.api().basePath() + "/auth")
                 .maxAge(0)
                 .build();
     }

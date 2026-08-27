@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/v1/admin")
+@RequestMapping("${greenink.api.base-path}/admin")
 public class AdminController {
     @GetMapping("/review")
     public Map<String, Object> reviewGuard() {

@@ -7,11 +7,14 @@ import java.util.List;
 
 @ConfigurationProperties(prefix = "greenink")
 public record GreenInkProperties(
+        Api api,
         Security security,
         Auth auth,
         Billing billing,
         Cors cors
 ) {
+    public record Api(String basePath) {}
+
     public record Security(
             String jwtSecret,
             Duration accessTokenTtl,
@@ -33,3 +36,4 @@ public record GreenInkProperties(
 
     public record Cors(List<String> allowedOrigins) {}
 }
+

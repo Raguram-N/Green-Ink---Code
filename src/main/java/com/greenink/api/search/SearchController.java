@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("${greenink.api.base-path}")
 public class SearchController {
     private final SearchService searchService;
     private final SearchHistoryRepository historyRepository;

@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("${greenink.api.base-path}")
 public class BillingController {
     private final PlanService planService;
     private final BillingService billingService;
