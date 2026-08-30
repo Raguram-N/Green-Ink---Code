@@ -65,6 +65,18 @@ The current backend flow has also been manually verified end-to-end for:
 
 > **Important:** This repository is still a development / integration baseline, not a production deployment. Real database persistence, real OTP delivery, real Razorpay verification/webhooks, production secrets, rate limiting, monitoring, backup/recovery, and final security hardening are still required before launch.
 
+### Latest agreed baseline
+
+As of the current development stage:
+
+- API base path/version is configurable; `/api/v1` is only the current default.
+- Route parameters such as `{chapterId}`, `{unitId}`, `{attemptId}`, and `{historyId}` are dynamic.
+- Current Premium pricing is fixed at **₹199 / month, ₹799 / 6 months, ₹999 / year**.
+- The production database provider is still intentionally undecided.
+- The reviewed schema is the implementation baseline; repository/database wiring is the next major backend milestone.
+- Premium remains server-authoritative.
+- The existing Green Ink frontend UI and Notes/PYQ+ experience should be preserved during backend integration.
+
 ---
 
 ## 1. Architecture
@@ -98,7 +110,7 @@ Future : Real database adapters
 The frontend may show a lock, but it never decides whether content is accessible.
 
 ```text
-GET {API_BASE}/chapters/u1-c2/notes
+GET {API_BASE}/chapters/{chapterId}/notes
               |
               v
         ContentService
@@ -147,7 +159,51 @@ Controllers, security matchers, and authentication cookie paths use the configur
 
 This allows the project to move from `/api/v1` to a future API version without editing every controller.
 
-Throughout this README, `/api/v1` means the **current default API base path**.
+Throughout this README:
+
+```text
+{API_BASE} = configured Green Ink API base path
+```
+
+Current default:
+
+```text
+{API_BASE} = /api/v1
+```
+
+Endpoint documentation therefore uses `{API_BASE}` rather than hardcoding `/api/v1`.
+
+### Current implementation
+
+The Java routing no longer hardcodes `/api/v1`.
+
+Controllers use the configured property, conceptually:
+
+```java
+@RequestMapping("${greenink.api.base-path}/chapters")
+```
+
+and chapter-specific routes remain dynamic:
+
+```java
+@GetMapping("/{chapterId}/notes")
+```
+
+So these are all handled by the same route definition:
+
+```text
+{API_BASE}/chapters/u1-c1/notes
+{API_BASE}/chapters/u1-c2/notes
+{API_BASE}/chapters/u4-c3/notes
+```
+
+Changing only:
+
+```text
+GREEN_INK_API_BASE_PATH=/api/v2
+```
+
+moves the API base version without editing each controller.
 
 ---
 
@@ -339,44 +395,64 @@ The frontend can use `access` / `accessible` to render locks, but Spring checks 
 
 ## 8. Endpoint matrix
 
-All paths below use the current default API base path `/api/v1`.
+All endpoint paths below use `{API_BASE}`.
+
+With the current default configuration:
+
+```text
+{API_BASE} = /api/v1
+```
+
+For example:
+
+```text
+{API_BASE}/chapters/{chapterId}/notes
+```
+
+currently resolves to:
+
+```text
+/api/v1/chapters/u1-c2/notes
+```
+
+when `chapterId = u1-c2`.
 
 | Method | Endpoint | Guard | Purpose |
 |---|---|---|---|
-| POST | `/api/v1/auth/otp/request` | Public | Issue OTP challenge |
-| POST | `/api/v1/auth/otp/resend` | Public + cooldown | Issue replacement OTP challenge |
-| POST | `/api/v1/auth/otp/verify` | Public | Verify OTP and issue session |
-| POST | `/api/v1/auth/refresh` | Refresh session | Rotate/refresh authentication |
-| POST | `/api/v1/auth/logout` | Public/current session | Logout current session |
-| POST | `/api/v1/auth/logout-all` | USER | Invalidate user sessions |
-| GET | `/api/v1/units` | Public | All units + chapters |
-| GET | `/api/v1/units/{unitId}` | Public | One unit |
-| GET | `/api/v1/units/{unitId}/chapters` | Public | Chapters in a unit |
-| GET | `/api/v1/chapters/{chapterId}` | Public | Chapter metadata/access state |
-| GET | `/api/v1/chapters/{chapterId}/notes` | Free OR Premium | Chapter Notes |
-| POST | `/api/v1/chapters/{chapterId}/pyq/attempts` | Free OR Premium | Start PYQ attempt |
-| POST | `/api/v1/pyq/attempts/{attemptId}/answers` | Attempt owner | Submit one answer |
-| POST | `/api/v1/pyq/attempts/{attemptId}/complete` | Attempt owner | Complete attempt |
-| GET | `/api/v1/search?q=...` | Public | Search |
-| GET | `/api/v1/me/search-history` | USER | Synced search history |
-| DELETE | `/api/v1/me/search-history/{historyId}` | USER | Delete one search |
-| DELETE | `/api/v1/me/search-history` | USER | Clear search history |
-| GET | `/api/v1/me` | USER | Profile + Premium + progress |
-| GET | `/api/v1/me/notifications` | USER | Notification list |
-| GET | `/api/v1/me/preferences` | USER | User preferences |
-| PUT | `/api/v1/me/preferences` | USER | Update preferences |
-| DELETE | `/api/v1/me` | USER | Delete current account state |
-| GET | `/api/v1/me/progress` | USER | Notes/PYQ progress |
-| PUT | `/api/v1/me/progress/chapters/{chapterId}` | USER | Mark Notes complete/incomplete |
-| DELETE | `/api/v1/me/progress/notes` | USER | Reset Notes progress |
-| DELETE | `/api/v1/me/progress/pyq` | USER | Reset PYQ progress |
-| GET | `/api/v1/plans` | Public | Premium plans |
-| POST | `/api/v1/billing/orders` | USER | Create payment order |
-| POST | `/api/v1/billing/payments/verify` | USER + owner | Verify checkout result |
-| GET | `/api/v1/billing/subscription` | USER | Current subscription/entitlement |
-| GET | `/api/v1/billing/payments` | USER | Payment history |
-| POST | `/api/v1/webhooks/razorpay` | Provider signature | Razorpay webhook |
-| GET | `/api/v1/admin/review` | ADMIN | Admin role-guard example |
+| POST | `{API_BASE}/auth/otp/request` | Public | Issue OTP challenge |
+| POST | `{API_BASE}/auth/otp/resend` | Public + cooldown | Issue replacement OTP challenge |
+| POST | `{API_BASE}/auth/otp/verify` | Public | Verify OTP and issue session |
+| POST | `{API_BASE}/auth/refresh` | Refresh session | Rotate/refresh authentication |
+| POST | `{API_BASE}/auth/logout` | Public/current session | Logout current session |
+| POST | `{API_BASE}/auth/logout-all` | USER | Invalidate user sessions |
+| GET | `{API_BASE}/units` | Public | All units + chapters |
+| GET | `{API_BASE}/units/{unitId}` | Public | One unit |
+| GET | `{API_BASE}/units/{unitId}/chapters` | Public | Chapters in a unit |
+| GET | `{API_BASE}/chapters/{chapterId}` | Public | Chapter metadata/access state |
+| GET | `{API_BASE}/chapters/{chapterId}/notes` | Free OR Premium | Chapter Notes |
+| POST | `{API_BASE}/chapters/{chapterId}/pyq/attempts` | Free OR Premium | Start PYQ attempt |
+| POST | `{API_BASE}/pyq/attempts/{attemptId}/answers` | Attempt owner | Submit one answer |
+| POST | `{API_BASE}/pyq/attempts/{attemptId}/complete` | Attempt owner | Complete attempt |
+| GET | `{API_BASE}/search?q=...` | Public | Search |
+| GET | `{API_BASE}/me/search-history` | USER | Synced search history |
+| DELETE | `{API_BASE}/me/search-history/{historyId}` | USER | Delete one search |
+| DELETE | `{API_BASE}/me/search-history` | USER | Clear search history |
+| GET | `{API_BASE}/me` | USER | Profile + Premium + progress |
+| GET | `{API_BASE}/me/notifications` | USER | Notification list |
+| GET | `{API_BASE}/me/preferences` | USER | User preferences |
+| PUT | `{API_BASE}/me/preferences` | USER | Update preferences |
+| DELETE | `{API_BASE}/me` | USER | Delete current account state |
+| GET | `{API_BASE}/me/progress` | USER | Notes/PYQ progress |
+| PUT | `{API_BASE}/me/progress/chapters/{chapterId}` | USER | Mark Notes complete/incomplete |
+| DELETE | `{API_BASE}/me/progress/notes` | USER | Reset Notes progress |
+| DELETE | `{API_BASE}/me/progress/pyq` | USER | Reset PYQ progress |
+| GET | `{API_BASE}/plans` | Public | Premium plans |
+| POST | `{API_BASE}/billing/orders` | USER | Create payment order |
+| POST | `{API_BASE}/billing/payments/verify` | USER + owner | Verify checkout result |
+| GET | `{API_BASE}/billing/subscription` | USER | Current subscription/entitlement |
+| GET | `{API_BASE}/billing/payments` | USER | Payment history |
+| POST | `{API_BASE}/webhooks/razorpay` | Provider signature | Razorpay webhook |
+| GET | `{API_BASE}/admin/review` | ADMIN | Admin role-guard example |
 
 ---
 
@@ -622,10 +698,12 @@ Controllers and services should not be rewritten to directly depend on a specifi
 
 The following development flow has already been tested successfully against the running Spring Boot application.
 
+The examples use `{API_BASE}`. With the current local configuration, `{API_BASE}` resolves to `/api/v1`.
+
 ### 1. Catalog
 
 ```text
-GET /api/v1/units
+GET {API_BASE}/units
 ```
 
 Result:
@@ -637,7 +715,7 @@ Result:
 ### 2. Free Notes
 
 ```text
-GET /api/v1/chapters/u1-c1/notes
+GET {API_BASE}/chapters/u1-c1/notes
 ```
 
 Result:
@@ -649,7 +727,7 @@ Result:
 ### 3. Premium Notes as free/guest user
 
 ```text
-GET /api/v1/chapters/u1-c2/notes
+GET {API_BASE}/chapters/{chapterId}/notes
 ```
 
 Result:
@@ -661,8 +739,8 @@ Result:
 ### 4. OTP login
 
 ```text
-POST /api/v1/auth/otp/request
-POST /api/v1/auth/otp/verify
+POST {API_BASE}/auth/otp/request
+POST {API_BASE}/auth/otp/verify
 ```
 
 Result:
@@ -675,7 +753,7 @@ Result:
 ### 5. Profile
 
 ```text
-GET /api/v1/me
+GET {API_BASE}/me
 ```
 
 Result included:
@@ -690,7 +768,7 @@ Result included:
 ### 6. Yearly demo order
 
 ```text
-POST /api/v1/billing/orders
+POST {API_BASE}/billing/orders
 ```
 
 with:
@@ -710,7 +788,7 @@ Verified development amount:
 ### 7. Demo payment verification
 
 ```text
-POST /api/v1/billing/payments/verify
+POST {API_BASE}/billing/payments/verify
 ```
 
 Result:
@@ -722,7 +800,7 @@ Result:
 ### 8. Premium Notes after activation
 
 ```text
-GET /api/v1/chapters/u1-c2/notes
+GET {API_BASE}/chapters/{chapterId}/notes
 ```
 
 with the authenticated access token.
@@ -939,7 +1017,9 @@ Major remaining tasks:
 The immediate next major backend milestone is:
 
 ```text
-Final schema
+Reviewed/final schema
+     ↓
+Choose database provider
      ↓
 Create real database
      ↓
@@ -979,6 +1059,7 @@ Green Ink backend should continue following these rules:
 Frontend prototype             Built / polished
 Spring REST architecture       Built
 API routing                    Built
+Dynamic route parameters       Built
 Dynamic API base path          Built
 Authentication flow            Built in development mode
 Premium access guard           Built
