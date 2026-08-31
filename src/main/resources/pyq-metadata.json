@@ -6,24 +6,24 @@
     },
     {
       "unitId": "u2",
-      "totalQuestions": 638
+      "totalQuestions": 617
     },
     {
       "unitId": "u3",
-      "totalQuestions": 1341
+      "totalQuestions": 1331
     },
     {
       "unitId": "u4",
-      "totalQuestions": 1084
+      "totalQuestions": 1072
     },
     {
       "unitId": "u5",
-      "totalQuestions": 1280
+      "totalQuestions": 1227
     },
     {
       "unitId": "u6",
       "totalQuestions": 926
     }
   ],
-  "totalQuestions": 6099
+  "totalQuestions": 6003
 }

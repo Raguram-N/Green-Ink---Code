@@ -11,6 +11,7 @@ public record GreenInkProperties(
         Security security,
         Auth auth,
         Billing billing,
+        Content content,
         Cors cors
 ) {
     public record Api(String basePath) {}
@@ -33,6 +34,8 @@ public record GreenInkProperties(
     ) {}
 
     public record Billing(String mode) {}
+
+    public record Content(String mode, String localPath) {}
 
     public record Cors(List<String> allowedOrigins) {}
 }

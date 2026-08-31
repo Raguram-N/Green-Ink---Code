@@ -5,6 +5,7 @@ public record PyqAttemptCompleteResponse(
         int answered,
         int correct,
         int total,
+        int scoreableTotal,
         int percentage,
         boolean progressSaved
 ) {}

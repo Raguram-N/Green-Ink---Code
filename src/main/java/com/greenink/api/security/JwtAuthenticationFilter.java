@@ -5,6 +5,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.security.authentication.InsufficientAuthenticationException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -16,9 +17,11 @@ import java.io.IOException;
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private final JwtService jwtService;
+    private final JsonAuthenticationEntryPoint authenticationEntryPoint;
 
-    public JwtAuthenticationFilter(JwtService jwtService) {
+    public JwtAuthenticationFilter(JwtService jwtService, JsonAuthenticationEntryPoint authenticationEntryPoint) {
         this.jwtService = jwtService;
+        this.authenticationEntryPoint = authenticationEntryPoint;
     }
 
     @Override
@@ -34,6 +37,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             } catch (JwtException | IllegalArgumentException ignored) {
                 SecurityContextHolder.clearContext();
+                authenticationEntryPoint.commence(request, response, new InsufficientAuthenticationException("Invalid or expired access token."));
+                return;
             }
         }
         filterChain.doFilter(request, response);

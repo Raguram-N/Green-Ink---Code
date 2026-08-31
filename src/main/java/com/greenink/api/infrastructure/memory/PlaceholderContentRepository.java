@@ -3,6 +3,7 @@ package com.greenink.api.infrastructure.memory;
 import com.greenink.api.content.ContentRepository;
 import com.greenink.api.content.NoteDocument;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
@@ -15,6 +16,7 @@ import java.util.Optional;
  * Do not migrate production Notes into this class.
  */
 @Repository
+@ConditionalOnProperty(name = "greenink.content.mode", havingValue = "placeholder", matchIfMissing = true)
 public class PlaceholderContentRepository implements ContentRepository {
     private final Map<String, NoteDocument> documents;
 

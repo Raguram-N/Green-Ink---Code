@@ -36,7 +36,7 @@ public class ProgressService {
         var pyq = progressRepository.pyqSnapshot(userId);
         var unitRows = catalogRepository.findAllUnits().stream().map(unit -> unitProgress(unit, completed, pyq)).toList();
         return new ProgressResponse(
-                new ProgressResponse.NotesProgress(completed.size(), totalNotes, percentage(completed.size(), totalNotes)),
+                new ProgressResponse.NotesProgress(completed.size(), totalNotes, percentage(completed.size(), totalNotes), Set.copyOf(completed)),
                 new ProgressResponse.PyqProgress(pyq.answered(), pyqMetadata.totalQuestions(),
                         percentage(pyq.answered(), pyqMetadata.totalQuestions()), pyq.bestCorrect(), pyq.chaptersStarted()),
                 unitRows);

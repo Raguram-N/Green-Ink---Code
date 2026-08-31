@@ -54,9 +54,9 @@ public class PyqService {
                 questions.stream().map(PyqQuestion::id).toList(), Instant.now());
         attemptRepository.save(attempt);
         List<PyqQuestionResponse> publicQuestions = questions.stream()
-                .map(q -> new PyqQuestionResponse(q.id(), q.question(), q.options(), q.source()))
+                .map(q -> new PyqQuestionResponse(q.id(), q.question(), q.options(), q.source(), q.matchRows(), q.unkeyedStatus(), q.kuralRefs(), q.sourceMetadata()))
                 .toList();
-        return new PyqAttemptStartResponse(attemptId, chapterId, questions.size(), publicQuestions, guestToken);
+        return new PyqAttemptStartResponse(attemptId, chapterId, questions.size(), publicQuestions, guestToken, pyqRepository.kuralTextByChapterId(chapterId));
     }
 
     public PyqAnswerResponse answer(String attemptId, String guestToken, Optional<String> userId, PyqAnswerRequest request) {
@@ -76,8 +76,11 @@ public class PyqService {
             throw new BadRequestException("ATTEMPT_ALREADY_COMPLETED", ex.getMessage());
         }
         attemptRepository.save(attempt);
-        boolean correct = question.correctOption().equalsIgnoreCase(selected);
-        return new PyqAnswerResponse(question.id(), selected, correct, question.correctOption(), question.explanation());
+        boolean scored = isScoreable(question);
+        Boolean correct = scored ? question.correctOption().equalsIgnoreCase(selected) : null;
+        String explanation = scored ? question.explanation() : "Answer key unavailable";
+        return new PyqAnswerResponse(question.id(), selected, scored, correct,
+                scored ? question.correctOption() : null, explanation);
     }
 
     public PyqAttemptCompleteResponse complete(String attemptId, String guestToken, Optional<String> userId) {
@@ -87,7 +90,7 @@ public class PyqService {
         int correct = 0;
         for (Map.Entry<String, String> entry : answers.entrySet()) {
             PyqQuestion question = pyqRepository.findById(entry.getKey()).orElse(null);
-            if (question != null && question.correctOption().equalsIgnoreCase(entry.getValue())) correct++;
+            if (question != null && isScoreable(question) && question.correctOption().equalsIgnoreCase(entry.getValue())) correct++;
         }
         attempt.complete();
         attemptRepository.save(attempt);
@@ -97,8 +100,12 @@ public class PyqService {
             saved = true;
         }
         int total = attempt.questionIds().size();
-        int percentage = total == 0 ? 0 : (int) Math.round(correct * 100.0 / total);
-        return new PyqAttemptCompleteResponse(attempt.id(), answers.size(), correct, total, percentage, saved);
+        int scoreableTotal = (int) attempt.questionIds().stream()
+                .map(id -> pyqRepository.findById(id).orElse(null))
+                .filter(this::isScoreable)
+                .count();
+        int percentage = scoreableTotal == 0 ? 0 : (int) Math.round(correct * 100.0 / scoreableTotal);
+        return new PyqAttemptCompleteResponse(attempt.id(), answers.size(), correct, total, scoreableTotal, percentage, saved);
     }
 
     private PyqAttempt requireAttempt(String attemptId) {
@@ -113,6 +120,10 @@ public class PyqService {
         }
         if (guestToken != null && attempt.guestTokenHash() != null && Hashing.sha256(guestToken).equals(attempt.guestTokenHash())) return;
         throw new UnauthorizedException("GUEST_ATTEMPT_TOKEN_REQUIRED", "X-Attempt-Token is required for this guest attempt.");
+    }
+
+    private boolean isScoreable(PyqQuestion question) {
+        return question != null && question.correctOption() != null && !question.correctOption().isBlank();
     }
 
     private String newGuestToken() {
