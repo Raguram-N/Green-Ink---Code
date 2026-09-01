@@ -1,0 +1,1 @@
+window.GREEN_INK_CONFIG=Object.freeze({apiBaseUrl:'https://YOUR_API_DOMAIN/api/v1'});

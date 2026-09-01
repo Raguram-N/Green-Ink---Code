@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="no-store, no-cache, must-revalidate, max-age=0" http-equiv="Cache-Control"/><meta content="no-cache" http-equiv="Pragma"/><meta content="0" http-equiv="Expires"/><meta content="#F5EFE0" name="theme-color"/><title>Green Ink – TNPSC General Studies</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Caveat:wght@500;700&amp;display=swap" rel="stylesheet"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="css/app-production.css">
+</head><body><main class="app" id="app">
+<section class="screen active" id="screen-login">
+  <div class="inner login-inner exact-reference-login">
+
+    <div class="login-brand-block">
+      <div class="brandmark gi-brand-green">Green Ink</div>
+      <div class="brand-line">Just Tap, Just Swipe</div>
+    </div>
+
+    <div class="login-auth-wrap">
+      <div id="loginIdentifierStep">
+        <div class="field reference-login-field">
+          <label for="loginIdentifier">Mobile number / Email ID</label>
+
+          <div class="login-identifier-shell">
+          <span class="login-field-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true">
+  <rect x="7.1" y="2.6" width="9.8" height="18.8" rx="1.8"></rect>
+  <line x1="10.2" y1="5.2" x2="13.8" y2="5.2"></line>
+  <circle cx="12" cy="18.6" r=".65" fill="currentColor" stroke="none"></circle>
+</svg></span>
+          <input
+            id="loginIdentifier"
+            type="text"
+            inputmode="email"
+            autocomplete="username"
+            aria-describedby="loginIdentifierError"
+          />
+        </div>
+
+        <div class="login-field-error" id="loginIdentifierError" role="alert" hidden></div>
+      </div>
+
+      <div class="login-send-row">
+        <button class="login-send-otp" data-login-action="send-otp" type="button">
+          <span class="login-send-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M21 3 3.8 10.1c-.8.3-.8 1.4 0 1.7l6.6 2.4 2.4 6.6c.3.8 1.4.8 1.7 0L21 3Z"></path>
+  <path d="m10.4 14.2 4.5-4.5"></path>
+</svg></span>
+          <span>Send OTP</span>
+        </button>
+      </div>
+
+      <div class="login-guest-wrap">
+        <span class="login-guest-rule" aria-hidden="true"></span>
+        <span class="login-guest-or">or</span>
+        <span class="login-guest-rule" aria-hidden="true"></span>
+      </div>
+
+      <button class="login-guest-action" data-login-action="guest" type="button">
+        Continue as Guest
+        <span aria-hidden="true">→</span>
+      </button>
+      </div>
+
+      <div class="login-otp-area" id="loginOtpStep" hidden>
+        <div class="login-otp-heading">Enter 4-digit OTP</div>
+
+        <div class="otp-boxes" id="loginOtpBoxes" role="group" aria-label="4-digit OTP">
+          <input class="otp-box" id="loginOtp1" data-otp-index="0" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="1" placeholder="—" aria-label="OTP digit 1" />
+          <input class="otp-box" id="loginOtp2" data-otp-index="1" type="text" inputmode="numeric" maxlength="1" placeholder="—" aria-label="OTP digit 2" />
+          <input class="otp-box" id="loginOtp3" data-otp-index="2" type="text" inputmode="numeric" maxlength="1" placeholder="—" aria-label="OTP digit 3" />
+          <input class="otp-box" id="loginOtp4" data-otp-index="3" type="text" inputmode="numeric" maxlength="1" placeholder="—" aria-label="OTP digit 4" />
+        </div>
+
+        <div class="login-field-error login-otp-error" id="loginOtpError" role="alert" hidden></div>
+
+        <div class="login-otp-destination">
+          <span>OTP sent to</span>
+          <strong id="loginOtpTarget"></strong>
+          <span class="login-destination-divider" aria-hidden="true"></span>
+          <button class="login-change-btn" data-login-action="change-identifier" type="button">Change</button>
+        </div>
+
+        <div class="login-resend-row">
+          <span class="login-clock" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true">
+  <circle cx="12" cy="12" r="8.5"></circle>
+  <path d="M12 7.2v5.2l3.2 2"></path>
+</svg></span>
+          <span id="loginResendText">Resend OTP in 00:45</span>
+          <button class="login-resend-btn" id="loginResendButton" data-login-action="resend-otp" type="button" hidden>Resend OTP</button>
+        </div>
+
+        <button class="login-verify-otp" data-login-action="verify-otp" type="button">
+          <span>Verify OTP</span>
+          <span class="login-verify-arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="foot reference-login-foot">All the Best 😊</div>
+  </div>
+</section>
+<section class="screen" id="screen-home"><div class="inner"><div class="brandmark green-ink-home-brand">Green Ink</div><div class="green-ink-home-tagline">Just Tap, Just Swipe</div><div aria-label="General Studies Units" class="green-ink-unit-list"><button class="topic-row green-ink-unit-row" data-unit="0" type="button"><span class="green-ink-unit-copy"><span class="green-ink-unit-label">1</span><span class="green-ink-unit-title">General Science</span></span><span class="topic-chevron">→</span></button><button class="topic-row green-ink-unit-row" data-unit="1" type="button"><span class="green-ink-unit-copy"><span class="green-ink-unit-label">2</span><span class="green-ink-unit-title">Geography of India</span></span><span class="topic-chevron">→</span></button><button class="topic-row green-ink-unit-row" data-unit="2" type="button"><span class="green-ink-unit-copy"><span class="green-ink-unit-label">3</span><span class="green-ink-unit-title">History, Culture of India, and Indian National Movement</span></span><span class="topic-chevron">→</span></button><button class="topic-row green-ink-unit-row" data-unit="3" type="button"><span class="green-ink-unit-copy"><span class="green-ink-unit-label">4</span><span class="green-ink-unit-title">Indian Polity</span></span><span class="topic-chevron">→</span></button><button class="topic-row green-ink-unit-row" data-unit="4" type="button"><span class="green-ink-unit-copy"><span class="green-ink-unit-label">5</span><span class="green-ink-unit-title">Indian Economy and Development Administration in Tamil Nadu</span></span><span class="topic-chevron">→</span></button><button class="topic-row green-ink-unit-row" data-unit="5" type="button"><span class="green-ink-unit-copy"><span class="green-ink-unit-label">6</span><span class="green-ink-unit-title">History, Culture, Heritage, and Socio-Political Movements in Tamil Nadu</span></span><span class="topic-chevron">→</span></button></div></div></section>
+<section class="screen" id="screen-chapters"><header class="app-header"><button class="back" data-action="home" type="button">← Back</button><div class="title" id="chaptersTitle">Unit</div><div class="spacer"></div></header><div class="inner"><div id="chapterListWrap"></div></div></section>
+<section class="screen" id="screen-content"><header class="app-header"><button class="back" data-action="chapters" type="button">← Back</button><div class="title" id="contentTitle">Chapter</div><div class="spacer"></div></header><div class="seg-sticky"><div class="segmented"><button class="seg-btn active" data-mode="notes" type="button">Notes</button><button class="seg-btn" data-mode="pyq" type="button">PYQ+</button></div></div><div class="study-pane active" id="notesPane"><div class="notes-scroll" id="notesScroll"><div class="content-title-block"><div class="content-kicker" id="contentKicker">Unit</div><div class="content-chapter-title" id="contentChapterTitle">Chapter</div></div><div id="revisionContent"></div></div></div><div class="study-pane" id="pyqPane"><div class="pyq-trial-empty" id="pyqEmpty"><div class="pyq-empty"><div class="big">PYQ+ is empty.</div><p>Subject-wise MCQs will be added here.</p></div></div><div class="pyq-trial-shell" id="pyqShell" hidden><div class="pyq-trial-scroll" id="pyqScroll"><div class="pyq-trial-source" id="pyqExamSource"><span class="pyq-trial-source-copy" id="pyqExamSourceCopy"></span></div><div class="pyq-trial-question-card"><div class="pyq-trial-question" id="pyqQuestionText"></div></div><div class="pyq-trial-options" id="pyqOptions"></div><div class="pyq-trial-feedback" id="pyqFeedback" aria-live="polite" hidden><div class="pyq-trial-feedback-title" id="pyqFeedbackTitle"></div><div class="pyq-answer-row" id="pyqAnswerRow"><p class="pyq-trial-feedback-copy" id="pyqFeedbackCopy"></p></div><div class="pyq-kural-answer" id="pyqKuralAnswer" hidden></div></div></div><div class="pyq-trial-nav"><button class="pyq-trial-nav-btn prev" data-pyq-nav="prev" id="pyqPrev" type="button">Previous</button><span class="pyq-trial-nav-count" id="pyqNavCount"></span><button class="pyq-trial-nav-btn next" data-pyq-nav="next" id="pyqNext" type="button">Next</button></div></div></div>
+<div class="notes-topic-dock" id="notesTopicDock" hidden>
+  <button class="notes-topic-button" id="notesTopicButton" type="button" aria-label="Open chapter topic list" aria-haspopup="dialog" aria-expanded="false">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 7h14M5 12h14M5 17h14"></path><path d="M2.5 7h.01M2.5 12h.01M2.5 17h.01"></path></svg>
+    <span class="notes-topic-counter" id="notesTopicCounter">1/1</span>
+  </button>
+</div>
+<div class="notes-topic-overlay" id="notesTopicOverlay" hidden>
+  <section class="notes-topic-sheet" id="notesTopicSheet" role="dialog" aria-modal="true" aria-labelledby="notesTopicSheetTitle">
+    <div class="notes-topic-handle" aria-hidden="true"></div>
+    <div class="notes-topic-sheet-head">
+      <div class="notes-topic-sheet-title-wrap">
+        <div class="notes-topic-sheet-title" id="notesTopicSheetTitle">Chapter</div>
+      </div>
+      <button class="notes-topic-close" id="notesTopicClose" type="button" aria-label="Close topic list">×</button>
+    </div>
+    <div class="notes-topic-search-wrap"><input class="notes-topic-search" id="notesTopicSearch" type="search" autocomplete="off" placeholder="Search topics…" aria-label="Search chapter topics"></div>
+    <div class="notes-topic-list" id="notesTopicList"></div>
+  </section>
+</div>
+</section>
+<section class="screen" id="screen-search"><header class="app-header"><button class="back" data-action="home" type="button">← Back</button><div class="title">Search</div><div class="spacer"></div></header><div class="inner"><div class="field" style="margin-top:0"><input autocomplete="off" id="searchInput" inputmode="search" placeholder="Search units or chapters…" type="search"/></div><div class="section-lab" id="searchStatusLab">Start typing to search the TNPSC syllabus</div><div id="searchResultsWrap"></div></div></section>
+
+<section class="screen" id="screen-payment">
+<header class="app-header"><button class="back" type="button" data-payment-action="back">← Back</button><div class="title">Premium</div><div class="spacer"></div></header>
+<div class="payment-shell">
+  <div class="payment-scroll" id="paymentScroll">
+    <div id="paymentPurchaseView">
+      <div class="payment-kicker">Green Ink Premium</div>
+      <h1 class="payment-title">Choose your plan</h1>
+      <p class="payment-subtitle">Unlock complete Notes and PYQ+ across all six TNPSC units.</p>
+
+      <div class="payment-plan-list" role="radiogroup" aria-label="Choose a Green Ink Premium plan">
+        <button class="payment-plan-card" type="button" role="radio" aria-checked="false" data-payment-plan="monthly">
+          <span class="payment-radio" aria-hidden="true"></span>
+          <span class="payment-plan-copy"><span class="payment-plan-line"><span class="payment-plan-price">₹199</span><span class="payment-plan-period">/ Month</span></span><span class="payment-plan-billing">Billed every month. Cancel anytime.</span></span>
+          <span class="payment-plan-badges"></span>
+        </button>
+        <button class="payment-plan-card" type="button" role="radio" aria-checked="false" data-payment-plan="sixmonth">
+          <span class="payment-radio" aria-hidden="true"></span>
+          <span class="payment-plan-copy"><span class="payment-plan-line"><span class="payment-plan-price">₹799</span><span class="payment-plan-period">/ 6 Months</span></span><span class="payment-plan-billing">Billed every 6 months.</span></span>
+          <span class="payment-plan-badges"><span class="payment-saving">Save 33%</span></span>
+        </button>
+        <button class="payment-plan-card" type="button" role="radio" aria-checked="false" data-payment-plan="yearly">
+          <span class="payment-radio" aria-hidden="true"></span>
+          <span class="payment-plan-copy"><span class="payment-plan-line"><span class="payment-plan-price">₹999</span><span class="payment-plan-period">/ Year</span></span><span class="payment-plan-billing">Billed once a year.</span></span>
+          <span class="payment-plan-badges"><span class="payment-saving">Save 58%</span><span class="payment-best">Best Value</span></span>
+        </button>
+      </div>
+
+      <div class="payment-section-label">Choose payment method</div>
+      <div class="payment-method-list" role="radiogroup" aria-label="Choose payment method">
+        <button class="payment-method-row" type="button" role="radio" aria-checked="false" data-payment-method="upi">
+          <span class="payment-method-icon">UPI</span><span class="payment-method-name">UPI</span><span class="payment-radio" aria-hidden="true"></span>
+        </button>
+        <button class="payment-method-row" type="button" role="radio" aria-checked="false" data-payment-method="gpay">
+          <span class="payment-method-icon">G</span><span class="payment-method-name">GPay</span><span class="payment-radio" aria-hidden="true"></span>
+        </button>
+        <button class="payment-method-row" type="button" role="radio" aria-checked="false" data-payment-method="card">
+          <span class="payment-method-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"></rect><path d="M3.5 9.5h17M7 14h4"></path></svg></span><span class="payment-method-name">Credit / Debit Card</span><span class="payment-radio" aria-hidden="true"></span>
+        </button>
+        <button class="payment-method-row" type="button" role="radio" aria-checked="false" data-payment-method="netbanking">
+          <span class="payment-method-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18L12 4 3 9Z"></path><path d="M5 10v7M9.5 10v7M14.5 10v7M19 10v7M3 19h18"></path></svg></span><span class="payment-method-name">Net Banking</span><span class="payment-radio" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="payment-trust" aria-label="Premium benefits">
+        <div class="payment-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5c0 4.7-2.8 8.1-7 10-4.2-1.9-7-5.3-7-10V6l7-3Z"></path><path d="m9.5 12 1.6 1.6 3.6-3.8"></path></svg><span>Complete premium access after checkout</span></div>
+        <div class="payment-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-7 11h5l-1 9 8-12h-5l0-8Z"></path></svg><span>Instant access to all chapters</span></div>
+      </div>
+      <div class="payment-demo-note">Prototype checkout · No real payment will be charged.</div>
+    </div>
+
+    <div class="payment-auth" id="paymentAuthView" hidden>
+      <div class="payment-kicker">Green Ink Premium</div>
+      <h1 class="payment-title">Save your Premium access</h1>
+      <p class="payment-subtitle">You entered as Guest. Kindly log in with your mobile number or email ID before payment. Use the same login next time to restore your Premium access.</p>
+
+      <div class="payment-auth-summary" aria-label="Selected purchase">
+        <div><span>Plan</span><strong id="paymentAuthPlanSummary">Premium</strong></div>
+        <div><span>Payment</span><strong id="paymentAuthMethodSummary">Payment method</strong></div>
+      </div>
+
+      <div id="paymentAuthIdentifierStep">
+        <div class="payment-auth-field">
+          <label for="paymentAuthIdentifier">Mobile number / Email ID</label>
+          <input id="paymentAuthIdentifier" type="text" autocomplete="username" inputmode="text" placeholder="Enter mobile number or email ID" />
+          <div class="payment-auth-error" id="paymentAuthIdentifierError" hidden></div>
+        </div>
+        <button class="payment-pay-btn payment-auth-primary" type="button" data-payment-auth-action="send-otp">Send OTP</button>
+      </div>
+
+      <div id="paymentAuthOtpStep" hidden>
+        <div class="payment-auth-otp-head">
+          <div>
+            <div class="payment-auth-otp-title">Enter 4-digit OTP</div>
+            <div class="payment-auth-otp-copy">OTP sent to <strong id="paymentAuthOtpTarget"></strong></div>
+          </div>
+          <button class="payment-auth-change" type="button" data-payment-auth-action="change-identifier">Change</button>
+        </div>
+        <div class="payment-auth-otp-row" role="group" aria-label="Enter 4-digit OTP">
+          <input data-payment-auth-otp maxlength="1" inputmode="numeric" autocomplete="one-time-code" aria-label="OTP digit 1" />
+          <input data-payment-auth-otp maxlength="1" inputmode="numeric" aria-label="OTP digit 2" />
+          <input data-payment-auth-otp maxlength="1" inputmode="numeric" aria-label="OTP digit 3" />
+          <input data-payment-auth-otp maxlength="1" inputmode="numeric" aria-label="OTP digit 4" />
+        </div>
+        <div class="payment-auth-error" id="paymentAuthOtpError" hidden></div>
+        <div class="payment-auth-resend-row">
+          <span id="paymentAuthResendText">Resend OTP in 00:45</span>
+          <button id="paymentAuthResendButton" type="button" data-payment-auth-action="resend-otp" hidden>Resend OTP</button>
+        </div>
+        <button class="payment-pay-btn payment-auth-primary" type="button" data-payment-auth-action="verify-otp">Verify &amp; Continue</button>
+      </div>
+      <div class="payment-demo-note">Prototype authentication · Any 4-digit OTP is accepted.</div>
+    </div>
+
+    <div class="payment-handoff" id="paymentHandoffView" hidden>
+      <div class="payment-handoff-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="m13 2-7 11h5l-1 9 8-12h-5V2Z"></path></svg>
+      </div>
+      <div class="payment-kicker">Secure payment</div>
+      <h2 id="paymentHandoffTitle">Opening payment…</h2>
+      <p id="paymentHandoffCopy">Continuing to your selected payment method.</p>
+      <div class="payment-handoff-plan" id="paymentHandoffPlan">Green Ink Premium</div>
+      <div class="payment-demo-note">Prototype handoff · No external payment app is opened.</div>
+    </div>
+
+    <div class="payment-success" id="paymentSuccessView" hidden>
+      <div class="payment-success-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.5 12.5 3.4 3.4 7.7-8"></path><circle cx="12" cy="12" r="9"></circle></svg></div>
+      <h2>Premium unlocked</h2>
+      <p>Your Green Ink Premium access is active. All Notes and PYQ+ chapters are now available.</p>
+      <div class="payment-success-plan" id="paymentSuccessPlan">Premium</div>
+      <div class="payment-success-date" id="paymentSuccessDate">Activated today</div>
+      <button class="payment-pay-btn" type="button" data-payment-action="finish">Start learning</button>
+    </div>
+  </div>
+  <div class="payment-footer" id="paymentFooter">
+    <button class="payment-pay-btn" id="paymentPayButton" type="button" data-payment-action="pay" disabled>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="10" width="12" height="10" rx="2"></rect><path d="M8.5 10V7.7a3.5 3.5 0 0 1 7 0V10"></path></svg>
+      <span id="paymentPayLabel">Pay Securely</span>
+    </button>
+  </div>
+</div>
+</section>
+
+<section class="screen" id="screen-profile">
+<header class="app-header"><button class="back" data-action="home" type="button">← Back</button><div class="title">Profile</div><div class="spacer"></div></header>
+<div class="inner profile-inner">
+
+  <div class="profile-section-label profile-section-first">Overall progress</div>
+  <div class="profile-overview-group">
+    <button class="profile-overview-row" type="button" data-profile-action="notes-progress">
+      <span class="profile-overview-title">Notes completion</span>
+      <span class="profile-overview-end"><span class="profile-overview-value" id="profileNotesPercent">0%</span><span class="profile-chevron">›</span></span>
+    </button>
+    <button class="profile-overview-row" type="button" data-profile-action="pyq-progress">
+      <span class="profile-overview-title">PYQ completion</span>
+      <span class="profile-overview-end"><span class="profile-overview-value" id="profilePyqPercent">0%</span><span class="profile-chevron">›</span></span>
+    </button>
+  </div>
+
+  <div class="profile-section-label">Reset</div>
+  <div class="profile-setting-group">
+    <button class="profile-row" type="button" data-profile-action="reset-notes-completion">
+      <span class="profile-row-title">Notes Completion</span><span class="profile-chevron">›</span>
+    </button>
+    <button class="profile-row" type="button" data-profile-action="reset-pyq-answers">
+      <span class="profile-row-title">PYQ Answers</span><span class="profile-chevron">›</span>
+    </button>
+    <button class="profile-row" type="button" data-profile-action="clear-search-history">
+      <span class="profile-row-title">Clear Search history</span><span class="profile-chevron">›</span>
+    </button>
+  </div>
+
+  <div class="profile-section-label">Reading</div>
+  <div class="profile-setting-group">
+    <div class="profile-row profile-row-static">
+      <span class="profile-row-title">Text Size</span>
+      <span class="profile-text-size" role="group" aria-label="Notes text size">
+        <button type="button" data-text-size="sm" aria-label="Smaller notes text">A−</button>
+        <button type="button" data-text-size="md" aria-label="Default notes text">A</button>
+        <button type="button" data-text-size="lg" aria-label="Larger notes text">A+</button>
+      </span>
+    </div>
+  </div>
+
+  <div class="profile-section-label" id="profilePaymentsSection">Payments</div>
+  <div class="profile-setting-group">
+    <button class="profile-row" id="profilePremiumRow" type="button" data-profile-action="open-payment">
+      <span class="profile-row-title" id="profilePremiumTitle">Get premium</span>
+      <span class="profile-payment-end"><span class="profile-row-value" id="profilePremiumValue"></span><span class="profile-chevron" id="profilePremiumChevron">›</span></span>
+    </button>
+  </div>
+
+  <div class="profile-section-label">App</div>
+  <div class="profile-setting-group">
+    <button class="profile-row" type="button" data-profile-action="notifications">
+      <span class="profile-row-title">Notification</span>
+      <span class="profile-payment-end"><span class="profile-row-value" id="profileNotificationCount"></span><span class="profile-chevron">›</span></span>
+    </button>
+    <button class="profile-row" type="button" data-profile-action="about">
+      <span class="profile-row-title">About <span class="gi-brand-green">Green Ink</span></span><span class="profile-chevron">›</span>
+    </button>
+    <button class="profile-row" type="button" data-profile-action="support">
+      <span class="profile-row-title">Support</span><span class="profile-chevron">›</span>
+    </button>
+    <button class="profile-row" type="button" data-profile-action="privacy">
+      <span class="profile-row-title">Privacy Policy</span><span class="profile-chevron">›</span>
+    </button>
+    <div class="profile-row profile-row-static">
+      <span class="profile-row-title">Version</span><span class="profile-row-value">1.0</span>
+    </div>
+  </div>
+
+  <button class="profile-logout-btn" type="button" data-profile-action="logout">Log Out</button>
+
+  <footer class="profile-signature" aria-label="Green Ink">
+    <div class="brandmark profile-brandmark gi-brand-green">Green Ink</div>
+    <div class="brand-line profile-brand-line">Just Tap, Just Swipe</div>
+  </footer>
+</div>
+</section>
+<div class="gi-sheet-overlay" id="giSheetOverlay" hidden>
+  <section class="gi-sheet" id="giSheet" role="dialog" aria-modal="true" aria-labelledby="giSheetTitle">
+    <div class="gi-sheet-grab" aria-hidden="true"></div>
+    <button class="gi-sheet-close" id="giSheetClose" type="button" aria-label="Close">×</button>
+    <div id="giSheetContent"></div>
+  </section>
+</div>
+<div class="gi-toast" id="giToast" role="status" aria-live="polite" hidden></div>
+
+<nav aria-label="Primary" class="bottom-nav hidden" id="bottomNav"><button class="nav-item" data-nav="home" type="button"><span class="nav-ic-wrap"><svg viewbox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4.5h4V19a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-9"></path></svg></span><span class="nav-label">Home</span></button><button class="nav-item" data-nav="mode" type="button"><span class="nav-ic-wrap"><svg viewbox="0 0 24 24"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13Z"></path><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z"></path></svg></span><span class="nav-label" id="navModeLabel">Notes</span></button><button class="nav-item" data-nav="search" type="button"><span class="nav-ic-wrap"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg></span><span class="nav-label">Search</span></button><button class="nav-item" data-nav="profile" type="button"><span class="nav-ic-wrap"><svg viewbox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c0-3.6 3.1-6.5 7-6.5s7 2.9 7 6.5"></path></svg></span><span class="nav-label">Profile</span></button></nav>
+</main>
+<script src="config/runtime-config.js"></script>
+<script src="js/app-production-candidate.js"></script></body></html>
