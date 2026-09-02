@@ -479,7 +479,7 @@ console.warn('Green Ink API PYQ fallback:',chapterId,err);
 return false;
 }
 }
-function giChapterId(ui,ci){return 'u'+(ui+1)+'-c'+(ci+1)}const GI_TAMIL_NOTES_READY=new Set(['u4-c3']);const GI_TAMIL_PYQ_READY=new Set();function giContentLanguage(){return giGetLanguage()==='ta'?'ta':'en'}function giCacheKeyFromChapterId(chapterId){return chapterId+':'+giContentLanguage()}function giContentUrl(url){return giContentLanguage()==='ta'?url+(url.includes('?')?'&':'?')+'lang=ta':url}
+function giChapterId(ui,ci){return 'u'+(ui+1)+'-c'+(ci+1)}const GI_TAMIL_NOTES_READY=new Set(['u4-c3','u1-c1','u1-c2','u1-c3','u1-c4','u1-c5','u1-c6','u1-c7','u1-c8','u1-c9','u1-c10','u1-c11']);const GI_TAMIL_PYQ_READY=new Set();function giContentLanguage(){return giGetLanguage()==='ta'?'ta':'en'}function giCacheKeyFromChapterId(chapterId){return chapterId+':'+giContentLanguage()}function giContentUrl(url){return giContentLanguage()==='ta'?url+(url.includes('?')?'&':'?')+'lang=ta':url}
 async function giLoadNotesFromApi(ui,ci){
 const chapterId=giChapterId(ui,ci);
 if(giContentLanguage()==='ta'&&!GI_TAMIL_NOTES_READY.has(chapterId))return false;
