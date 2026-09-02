@@ -7,5 +7,5 @@ import java.util.Optional;
  * The first production adapter can map this to Supabase/Postgres once the schema is finalized.
  */
 public interface ContentRepository {
-    Optional<NoteDocument> findNotesByChapterId(String chapterId);
+    Optional<NoteDocument> findNotesByChapterId(String chapterId, String language);
 }

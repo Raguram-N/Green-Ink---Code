@@ -25,6 +25,7 @@ import java.util.stream.Stream;
 @ConditionalOnProperty(name = "greenink.content.mode", havingValue = "local-json")
 public class LocalJsonContentRepository implements ContentRepository, PyqRepository {
     private final Map<String, NoteDocument> notesByChapter = new LinkedHashMap<>();
+    private final Map<String, NoteDocument> tamilNotesByChapter = new LinkedHashMap<>();
     private final Map<String, PyqQuestion> questionsById = new LinkedHashMap<>();
     private final Map<String, Map<String, List<String>>> kuralTextByChapter = new LinkedHashMap<>();
 
@@ -48,6 +49,22 @@ public class LocalJsonContentRepository implements ContentRepository, PyqReposit
         }
 
         for (Path file : files) loadFile(mapper, file);
+
+        Path tamilRoot = root.resolve("ta");
+        if (Files.isDirectory(tamilRoot)) {
+            try (Stream<Path> stream = Files.list(tamilRoot)) {
+                for (Path file : stream
+                        .filter(Files::isRegularFile)
+                        .filter(path -> path.getFileName().toString().matches("u[1-6]-c\\d+\\.html"))
+                        .sorted(Comparator.comparing(path -> path.getFileName().toString()))
+                        .toList()) {
+                    String chapterId = file.getFileName().toString().replaceFirst("\\.html$", "");
+                    String notes = Files.readString(file);
+                    tamilNotesByChapter.put(chapterId,
+                            new NoteDocument(chapterId, "local-json-ta-1", "HTML_FRAGMENT", notes));
+                }
+            }
+        }
 
         if (notesByChapter.size() != 200) {
             throw new IllegalStateException("Expected 200 chapter files, loaded " + notesByChapter.size());
@@ -124,8 +141,8 @@ public class LocalJsonContentRepository implements ContentRepository, PyqReposit
     }
 
     @Override
-    public Optional<NoteDocument> findNotesByChapterId(String chapterId) {
-        return Optional.ofNullable(notesByChapter.get(chapterId));
+    public Optional<NoteDocument> findNotesByChapterId(String chapterId, String language) {
+        return Optional.ofNullable("ta".equalsIgnoreCase(language) ? tamilNotesByChapter.get(chapterId) : notesByChapter.get(chapterId));
     }
 
     @Override

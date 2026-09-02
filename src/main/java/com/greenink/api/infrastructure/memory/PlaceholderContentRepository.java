@@ -28,7 +28,8 @@ public class PlaceholderContentRepository implements ContentRepository {
     }
 
     @Override
-    public Optional<NoteDocument> findNotesByChapterId(String chapterId) {
+    public Optional<NoteDocument> findNotesByChapterId(String chapterId, String language) {
+        if ("ta".equalsIgnoreCase(language)) return Optional.empty();
         return Optional.ofNullable(documents.get(chapterId));
     }
 

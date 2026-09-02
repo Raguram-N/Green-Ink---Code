@@ -21,10 +21,11 @@ public class ContentService {
         this.contentRepository = contentRepository;
     }
 
-    public NoteContentResponse getNotes(String chapterId, Optional<String> userId) {
+    public NoteContentResponse getNotes(String chapterId, Optional<String> userId, String lang) {
         ChapterDefinition chapter = catalogService.requireChapter(chapterId);
         entitlementService.requireChapterAccess(chapter, userId);
-        NoteDocument document = contentRepository.findNotesByChapterId(chapterId)
+        String language = "ta".equalsIgnoreCase(lang) ? "ta" : "en";
+        NoteDocument document = contentRepository.findNotesByChapterId(chapterId, language)
                 .orElseThrow(() -> new NotFoundException("CONTENT_NOT_MIGRATED",
                         "Notes are not present in the placeholder repository for this chapter yet."));
         return new NoteContentResponse(document.chapterId(), document.version(), document.format(), document.bodyHtml());
