@@ -44,6 +44,11 @@
             <artifactId>spring-boot-starter-jooq</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
             <version>${jjwt.version}</version>
@@ -105,14 +110,15 @@
                 <configuration>
                     <jdbc>
                         <driver>org.h2.Driver</driver>
-                        <url>jdbc:h2:mem:greenink;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;INIT=RUNSCRIPT FROM './src/main/resources/db/schema/green_ink_schema_h2.sql'</url>
+                        <url>jdbc:h2:mem:greenink;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1;INIT=RUNSCRIPT
+                            FROM './src/main/resources/db/schema/green_ink_schema_h2.sql'</url>
                         <user>sa</user>
                     </jdbc>
 
                     <generator>
                         <database>
                             <name>org.jooq.meta.h2.H2Database</name>
-                            <inputSchema>PUBLIC</inputSchema>
+                            <inputSchema>public</inputSchema>
                             <includes>.*</includes>
                         </database>
 
