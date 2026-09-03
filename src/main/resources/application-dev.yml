@@ -8,3 +8,8 @@ greenink:
     admin-identifiers: admin@greenink.local
   billing:
     mode: demo
+
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration

@@ -5,6 +5,7 @@ import com.greenink.api.content.NoteDocument;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
+import org.springframework.context.annotation.Profile;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -16,6 +17,7 @@ import java.util.Optional;
  * Do not migrate production Notes into this class.
  */
 @Repository
+@Profile("!jooq")
 @ConditionalOnProperty(name = "greenink.content.mode", havingValue = "placeholder", matchIfMissing = true)
 public class PlaceholderContentRepository implements ContentRepository {
     private final Map<String, NoteDocument> documents;

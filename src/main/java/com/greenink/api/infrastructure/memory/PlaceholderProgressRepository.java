@@ -2,12 +2,14 @@ package com.greenink.api.infrastructure.memory;
 
 import com.greenink.api.progress.ProgressRepository;
 import org.springframework.stereotype.Repository;
+import org.springframework.context.annotation.Profile;
 
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
+@Profile("!jooq")
 public class PlaceholderProgressRepository implements ProgressRepository {
     private final ConcurrentHashMap<String, Set<String>> notes = new ConcurrentHashMap<>();
     private final ConcurrentHashMap<String, ConcurrentHashMap<String, PyqChapterProgress>> pyq = new ConcurrentHashMap<>();

@@ -9,6 +9,7 @@ import com.greenink.api.pyq.PyqQuestion;
 import com.greenink.api.pyq.PyqRepository;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
+import org.springframework.context.annotation.Profile;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -22,6 +23,7 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 @Repository
+@Profile("!jooq")
 @ConditionalOnProperty(name = "greenink.content.mode", havingValue = "local-json")
 public class LocalJsonContentRepository implements ContentRepository, PyqRepository {
     private final Map<String, NoteDocument> notesByChapter = new LinkedHashMap<>();

@@ -4,6 +4,7 @@ import com.greenink.api.user.UserAccount;
 import com.greenink.api.user.UserPreferences;
 import com.greenink.api.user.UserRepository;
 import org.springframework.stereotype.Repository;
+import org.springframework.context.annotation.Profile;
 
 import java.time.Instant;
 import java.util.Optional;
@@ -15,6 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * Review-stage placeholder. Replace with a Supabase/Postgres adapter after the schema is finalized.
  */
 @Repository
+@Profile("!jooq")
 public class PlaceholderUserRepository implements UserRepository {
     private final ConcurrentHashMap<String, UserAccount> byId = new ConcurrentHashMap<>();
     private final ConcurrentHashMap<String, String> idByIdentifier = new ConcurrentHashMap<>();
