@@ -4,6 +4,7 @@ import com.greenink.api.pyq.PyqQuestion;
 import com.greenink.api.pyq.PyqRepository;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
+import org.springframework.context.annotation.Profile;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @Repository
+@Profile("!jooq")
 @ConditionalOnProperty(name = "greenink.content.mode", havingValue = "placeholder", matchIfMissing = true)
 public class PlaceholderPyqRepository implements PyqRepository {
     private final Map<String, PyqQuestion> byId = new LinkedHashMap<>();

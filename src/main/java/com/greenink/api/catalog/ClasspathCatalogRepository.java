@@ -2,6 +2,7 @@ package com.greenink.api.catalog;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
@@ -13,6 +14,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @Repository
+@Profile("!jooq")
 public class ClasspathCatalogRepository implements CatalogRepository {
     private final List<UnitDefinition> units;
     private final Map<String, UnitDefinition> unitsById = new LinkedHashMap<>();
